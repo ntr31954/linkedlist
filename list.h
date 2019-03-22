@@ -3,13 +3,14 @@
 
 #include <string>
 
-typedef char Element;
 
+typedef char Element;
 typedef int Position;
 const Position NOPOS = -1;
- 
+
 struct ListNode;
 typedef ListNode* ListNodePtr;
+
 
 struct ListNode {
   Element key;
@@ -29,23 +30,22 @@ struct List {
   ListNodePtr head;
 };
 
-ulong listSize                  (ListPtr l);
 
-ListPtr listCreate              ();
+ListPtr listCreate            ();
 
-void listInit                   (ListPtr l);
+void listInit                 (ListPtr l);
 
-bool listInsert                 (ListPtr l, Element x, Position i);
+bool listInsert               (ListPtr l, Element x, Position i);
 
-Position listLocate             (ListPtr l, Element x);
+Position listLocate           (ListPtr l, Element x);
 
-ListNodePtr listRetrieve        (ListPtr l, Position i);
+ListNodePtr listRetrieve          (ListPtr l, Position i);
 
-bool listRemove                 (ListPtr l, Position p);
+bool listRemove               (ListPtr l, Position p);
 
-void listMakeNull               (ListPtr l);
+void listMakeNull             (ListPtr l);
 
-ListNodePtr listFirst           (ListPtr l);
+ListNodePtr listFirst             (ListPtr l);
 
 static std::string listToString (ListPtr l, char c) {
   std::string s;
@@ -55,5 +55,8 @@ static std::string listToString (ListPtr l, char c) {
 
   return s;
 }
+
+ulong listSize                (ListPtr l);
+
 
 #endif
