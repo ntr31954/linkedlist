@@ -10,14 +10,6 @@ ListPtr listCreate(){
 	return AuxPtr;
 }
 
-static std::string listToString (ListPtr l, char c) {
-  std::string s;
-
-  for (ListNodePtr n = l->head; n != nullptr; n = n->next)
-    s += c + listNodeToString (n);
-
-  return s;
-}
 ListNodePtr listNodeCreate(Element e){
 	ListNodePtr AuxPtr = nullptr;
 	AuxPtr = new ListNode;
